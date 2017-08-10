@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+<%= @restaurant.address %>
+<br>
+<h3>Reviews</h3>
+<% @restaurant.reviews.each do |review| %>
+  <%= review.content %> - <%= review.rating %>/5 <br>
+<% end %>
+
+
+<%= link_to 'all restaurants', admin_restaurants_path %> |
+<%= link_to 'edit', edit_admin_restaurant_path(@restaurant) %> |
+<%= link_to 'delete', admin_restaurant_path(@restaurant), method: :delete %> 
+

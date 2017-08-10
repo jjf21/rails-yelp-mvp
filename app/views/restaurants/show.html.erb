@@ -1,0 +1,15 @@
+
+<%= render 'shared/card', restaurant: @restaurant %>
+
+<br>
+<br>
+
+<h2>Reviews</h2>
+<% @restaurant.reviews.each do |review| %>
+  <%= render 'shared/review', review: review %>
+<% end %>
+
+
+<%= link_to 'all restaurants', restaurants_path %> |
+<%= link_to 'add review', new_restaurant_review_path(@restaurant) %> 
+

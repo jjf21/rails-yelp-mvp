@@ -1,0 +1,13 @@
+<% url = 'https://source.unsplash.com/random/' %>
+<% url += (900..1100).to_a.sample.to_s + 'x' + (100..300).to_a.sample.to_s %>
+
+
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= url %>');">
+  <div class="card-category"><%= restaurant.category %></div>
+  <div class="card-description">
+    <h2><%= restaurant.name %></h2>
+    <p><%= restaurant.address %></p>
+  </div>
+  <%= link_to '',restaurant_path(restaurant), class:'card-link' %>
+</div>
